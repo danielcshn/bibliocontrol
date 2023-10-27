@@ -32,8 +32,8 @@ public class Biblioteca {
         String editorial = scanner.nextLine();
         System.out.print("Fecha de lanzamiento: ");
         String fechaLanzamiento = scanner.nextLine();
-        System.out.print("¿Está prestado? (Sí/No): ");
-        boolean prestado = scanner.nextLine().equalsIgnoreCase("Sí");
+        System.out.print("¿Está prestado? (Si/No): ");
+        boolean prestado = scanner.nextLine().equalsIgnoreCase("Si");
         String nombrePrestadoA = prestado ? "" : "-";  // Establecer "-" si no está prestado
 
         if (prestado) {
@@ -56,6 +56,7 @@ public class Biblioteca {
         if (libros.isEmpty()) {
         	System.out.println(" ");
             System.out.println("No hay libros registrados en la biblioteca.");
+            System.out.println(" ");
         } else {
         	System.out.println(" ");
             System.out.println("Lista de libros:");
@@ -130,7 +131,9 @@ public class Biblioteca {
                     libro.setNombrePrestadoA("-");
                 }
 
+                System.out.println(" ");
                 System.out.println("La información de préstamo del libro se ha modificado con éxito.");
+                System.out.println(" ");
                 encontrado = true;
                 break;
             }
