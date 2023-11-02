@@ -1,6 +1,15 @@
 import java.util.List;
 
+/**
+ * Clase DEMO para cargar y eliminar datos de la lista de libros.
+ */
+
 public class BibliotecaInicial {
+	
+	/**
+	 * Genera automaticamente 10 registros en la Biblioteca.
+	 * @param biblioteca
+	 */
     public static void inicializarBiblioteca(List<Libro> biblioteca) {
         for (int i = 1; i <= 10; i++) {
             String nombre = "Libro " + i;
@@ -23,6 +32,10 @@ public class BibliotecaInicial {
         System.out.println(" ");
     }
     
+    /**
+     * Limpia la lista.
+     * @param biblioteca
+     */
     public static void limpiarBiblioteca(List<Libro> biblioteca) {
         biblioteca.clear(); // Elimina todos los libros de la biblioteca
         

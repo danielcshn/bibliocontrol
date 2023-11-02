@@ -7,6 +7,9 @@ public class Biblioteca {
     private List<Libro> libros;
     private int idLibroActual;
 
+    /**
+     * Genera un ArrayList como base de datos.
+     */
     public Biblioteca() {
         libros = new ArrayList<>();
         idLibroActual = 1;
@@ -15,7 +18,10 @@ public class Biblioteca {
     public List<Libro> getLibros() {
         return libros;
     }
-    
+
+    /**
+     * Regostra un Libro.
+     */
     public void registrarLibro() {
         Scanner scanner = new Scanner(System.in);
 
@@ -51,7 +57,9 @@ public class Biblioteca {
         System.out.println(" ");
     }
 
-
+    /**
+     * Muestra una lista de libros.
+     */
     public void listarLibros() {
         if (libros.isEmpty()) {
         	System.out.println(" ");
@@ -76,7 +84,9 @@ public class Biblioteca {
         }
     }
 
-
+    /**
+     * Buscar un libro.
+     */
     public void buscarLibro() {
         Scanner scanner = new Scanner(System.in);
 
@@ -102,6 +112,9 @@ public class Biblioteca {
         }
     }
 
+    /**
+     * Modificar un libro.
+     */
     public void modificarLibro() {
         Scanner scanner = new Scanner(System.in);
 
@@ -146,6 +159,10 @@ public class Biblioteca {
         }
     }
     
+    /**
+     * Eliminar un libro por ID.
+     * @return = devuelve true si fue encontrado y eliminado o false si no fue encontrado.
+     */
     public boolean eliminarLibroPorID() {
         Scanner scanner = new Scanner(System.in);
 
