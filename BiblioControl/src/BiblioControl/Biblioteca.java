@@ -22,14 +22,14 @@ public class Biblioteca {
 
     /**
      * Toma la lista de libros
-     * @return = devuelve la lista de libros.
+     * @return devuelve la lista de libros.
      */
     public List<Libro> getLibros() {
         return libros;
     }
 
     /**
-     * Regostra un Libro.
+     * Registra un Libro.
      */
     public void registrarLibro() {
         Scanner scanner = new Scanner(System.in);
@@ -40,7 +40,6 @@ public class Biblioteca {
         String tipoTapa = obtenerStringValido(scanner);
         System.out.print("Número de páginas: ");
         int numeroPaginas = obtenerEnteroValido(scanner);
-        // scanner.nextLine();  // Consumir la nueva línea después de nextInt()
         System.out.print("Idioma: ");
         String idioma = obtenerStringValido(scanner);
         System.out.print("Editorial: ");
@@ -129,7 +128,6 @@ public class Biblioteca {
 
         System.out.print("Ingrese el ID del libro a modificar: ");
         int idModificar = obtenerEnteroValido(scanner);
-        //scanner.nextLine();  // Consumir la nueva línea después de nextInt()
 
         boolean encontrado = false;
         for (Libro libro : libros) {
@@ -170,14 +168,13 @@ public class Biblioteca {
     
     /**
      * Eliminar un libro por ID.
-     * @return = devuelve true si fue encontrado y eliminado o false si no fue encontrado.
+     * @return devuelve true si fue encontrado y eliminado o false si no fue encontrado.
      */
     public boolean eliminarLibroPorID() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Ingrese el ID del libro a eliminar: ");
         int idEliminar = obtenerEnteroValido(scanner);
-        //scanner.nextLine();  // Consumir la nueva línea después de nextInt()
 
         Iterator<Libro> iterator = libros.iterator();
         while (iterator.hasNext()) {
@@ -198,8 +195,8 @@ public class Biblioteca {
 
     /**
      * Validador de String valido.
-     * @param scanner = entrada de dato
-     * @return = la entrada en caso de ser verdadero, en caso de ser falso solicita ingresar nuevamente.
+     * @param scanner entrada de dato
+     * @return la entrada en caso de ser verdadero, en caso de ser falso solicita ingresar nuevamente.
      */
     private String obtenerStringValido(Scanner scanner) {
         while (true) {
@@ -214,8 +211,8 @@ public class Biblioteca {
     
     /**
      * Validador de Entero
-     * @param scanner = entrada de dato
-     * @return = la entrada en caso de ser verdadero, en caso de ser falso solicita ingresar nuevamente.
+     * @param scanner entrada de dato
+     * @return la entrada en caso de ser verdadero, en caso de ser falso solicita ingresar nuevamente.
      */
     private int obtenerEnteroValido(Scanner scanner) {
         while (true) {
@@ -229,8 +226,8 @@ public class Biblioteca {
     
     /**
      * Validador de Booleano
-     * @param scanner = entrada de dato
-     * @return = la entrada en caso de ser "si" / verdadero, en caso de ser falso solicita ingresar nuevamente.
+     * @param scanner entrada de dato
+     * @return la entrada en caso de ser "si" / verdadero, en caso de ser falso solicita ingresar nuevamente.
      */
     private boolean obtenerBooleanoValido(Scanner scanner) {
         while (true) {
