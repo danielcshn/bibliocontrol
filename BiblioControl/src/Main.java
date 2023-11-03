@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.InputMismatchException;
 
 /**
- * Clase principal
+ * Clase principal o inicio del programa.
  */
 
 public class Main {

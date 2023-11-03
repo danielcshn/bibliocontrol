@@ -1,3 +1,6 @@
+/**
+ * Clase para representar los libros.
+ */
 public class Libro {
 	
     private int id;

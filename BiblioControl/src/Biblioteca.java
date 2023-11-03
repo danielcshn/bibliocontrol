@@ -3,6 +3,9 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Iterator;
 
+/**
+ * Clase que gestiona la lista de libros.
+ */
 public class Biblioteca {
     private List<Libro> libros;
     private int idLibroActual;
@@ -15,6 +18,10 @@ public class Biblioteca {
         idLibroActual = 1;
     }
 
+    /**
+     * Toma la lista de libros
+     * @return = devuelve la lista de libros.
+     */
     public List<Libro> getLibros() {
         return libros;
     }
