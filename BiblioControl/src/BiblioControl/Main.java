@@ -17,28 +17,36 @@ public class Main {
 	/**
 	 * Menu principal de opciones.
 	 */
-	public static void main() {
+	public static void main(String[] args) {
         
     	Biblioteca biblioteca = new Biblioteca();
         Scanner scanner = new Scanner(System.in);
         
         System.out.println(" ");
-        System.out.println("Bienvenido al programa BiblioControl");
-        System.out.println("Participantes: Daniel, Veronica y Maxi");
+        System.out.println("  ######                              #####                                           ");
+        System.out.println("  #     # # #####  #      #  ####    #     #  ####  #    # ##### #####   ####  #      ");
+        System.out.println("  #     # # #    # #      # #    #   #       #    # ##   #   #   #    # #    # #      ");
+        System.out.println("  ######  # #####  #      # #    #   #       #    # # #  #   #   #    # #    # #      ");
+        System.out.println("  #     # # #    # #      # #    #   #       #    # #  # #   #   #####  #    # #      ");
+        System.out.println("  #     # # #    # #      # #    #   #     # #    # #   ##   #   #   #  #    # #      ");
+        System.out.println("  ######  # #####  ###### #  ####     #####   ####  #    #   #   #    #  ####  ###### ");
+        System.out.println("                                                                                      ");
+        System.out.println("    Bienvenido a BiblioControl v1.1");
+        System.out.println("    Participantes: Daniel, Veronica y Maxi");
         System.out.println(" ");
         
         while (true) {
-            System.out.println("Menú:");
-            System.out.println("1. Registrar un libro");
-            System.out.println("2. Listar libros");
-            System.out.println("3. Buscar un libro");
-            System.out.println("4. Modificar un libro");
-            System.out.println("5. Eliminar un libro");
+            System.out.println("  Menú:");
+            System.out.println("    1. Registrar un libro");
+            System.out.println("    2. Listar libros");
+            System.out.println("    3. Buscar un libro");
+            System.out.println("    4. Modificar un libro");
+            System.out.println("    5. Eliminar un libro");
             System.out.println(" ");
-            System.out.println("6. DEMO: Cargar lista de libros.");
-            System.out.println("7. DEMO: Eliminar lista de libros.");
+            System.out.println("    6. DEMO: Cargar lista de libros.");
+            System.out.println("    7. DEMO: Eliminar lista de libros.");
             System.out.println(" ");
-            System.out.println("8. Salir");
+            System.out.println("    8. Salir");
             System.out.println(" ");
             System.out.print("Seleccione una opción: ");
             System.out.println("");
@@ -49,24 +57,31 @@ public class Main {
             
             switch (opcion) {
                 case 1:
+                	// Opcion Registrar un Libro.
                     biblioteca.registrarLibro();
                     break;
                 case 2:
+                	// Opcion Listar Libros.
                     biblioteca.listarLibros();
                     break;
                 case 3:
+                	// Opcion Buscar un Libro.
                     biblioteca.buscarLibro();
                     break;
                 case 4:
+                	// Opcion Modificar un Libro.
                     biblioteca.modificarLibro();
                     break;
                 case 5:
+                	// Opcion Eliminar un Libro por ID.
                 	biblioteca.eliminarLibroPorID();
                     break;
                 case 6:
+                	// DEMO: Cargar lista de libros.
                 	BibliotecaInicial.inicializarBiblioteca(biblioteca.getLibros());
                     break;
                 case 7:
+                	// DEMO: Eliminar lista de libros.
                 	BibliotecaInicial.limpiarBiblioteca(biblioteca.getLibros());
                     break;
                 case 8:
