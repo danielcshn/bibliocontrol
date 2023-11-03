@@ -35,25 +35,25 @@ public class Biblioteca {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Nombre del libro: ");
-        String nombre = scanner.nextLine();
+        String nombre = obtenerStringValido(scanner);
         System.out.print("Tipo de tapa: ");
-        String tipoTapa = scanner.nextLine();
+        String tipoTapa = obtenerStringValido(scanner);
         System.out.print("Número de páginas: ");
-        int numeroPaginas = scanner.nextInt();
-        scanner.nextLine();  // Consumir la nueva línea después de nextInt()
+        int numeroPaginas = obtenerEnteroValido(scanner);
+        // scanner.nextLine();  // Consumir la nueva línea después de nextInt()
         System.out.print("Idioma: ");
-        String idioma = scanner.nextLine();
+        String idioma = obtenerStringValido(scanner);
         System.out.print("Editorial: ");
-        String editorial = scanner.nextLine();
+        String editorial = obtenerStringValido(scanner);
         System.out.print("Fecha de lanzamiento: ");
-        String fechaLanzamiento = scanner.nextLine();
+        String fechaLanzamiento = obtenerStringValido(scanner);
         System.out.print("¿Está prestado? (Si/No): ");
-        boolean prestado = scanner.nextLine().equalsIgnoreCase("Si");
+        boolean prestado = obtenerBooleanoValido(scanner);
         String nombrePrestadoA = prestado ? "" : "-";  // Establecer "-" si no está prestado
 
         if (prestado) {
             System.out.print("Nombre de la persona a la que se presta: ");
-            nombrePrestadoA = scanner.nextLine();
+            nombrePrestadoA = obtenerStringValido(scanner);
         }
 
         Libro libro = new Libro(idLibroActual++, nombre, tipoTapa, numeroPaginas, idioma, editorial, fechaLanzamiento,
@@ -101,7 +101,7 @@ public class Biblioteca {
 
         System.out.print("Ingrese el nombre del libro a buscar: ");
         System.out.println(" ");
-        String nombreBuscar = scanner.nextLine();
+        String nombreBuscar = obtenerStringValido(scanner);
 
         boolean encontrado = false;
         for (Libro libro : libros) {
@@ -128,8 +128,8 @@ public class Biblioteca {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Ingrese el ID del libro a modificar: ");
-        int idModificar = scanner.nextInt();
-        scanner.nextLine();  // Consumir la nueva línea después de nextInt()
+        int idModificar = obtenerEnteroValido(scanner);
+        //scanner.nextLine();  // Consumir la nueva línea después de nextInt()
 
         boolean encontrado = false;
         for (Libro libro : libros) {
@@ -141,11 +141,11 @@ public class Biblioteca {
                 System.out.println("Ingrese los nuevos datos:");
 
                 System.out.print("¿Está prestado? (Si/No): ");
-                boolean prestado = scanner.nextLine().equalsIgnoreCase("Si");
+                boolean prestado = obtenerBooleanoValido(scanner);
 
                 if (prestado) {
                     System.out.print("Nombre de la persona a la que se presta: ");
-                    String nombrePrestadoA = scanner.nextLine();
+                    String nombrePrestadoA = obtenerStringValido(scanner);
                     libro.setPrestado(true);
                     libro.setNombrePrestadoA(nombrePrestadoA);
                 } else {
@@ -176,8 +176,8 @@ public class Biblioteca {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Ingrese el ID del libro a eliminar: ");
-        int idEliminar = scanner.nextInt();
-        scanner.nextLine();  // Consumir la nueva línea después de nextInt()
+        int idEliminar = obtenerEnteroValido(scanner);
+        //scanner.nextLine();  // Consumir la nueva línea después de nextInt()
 
         Iterator<Libro> iterator = libros.iterator();
         while (iterator.hasNext()) {
@@ -196,4 +196,53 @@ public class Biblioteca {
         return false; // No se encontró ningún libro con el ID especificado
     }
 
+    /**
+     * Validador de String valido.
+     * @param scanner = entrada de dato
+     * @return = la entrada en caso de ser verdadero, en caso de ser falso solicita ingresar nuevamente.
+     */
+    private String obtenerStringValido(Scanner scanner) {
+        while (true) {
+            String input = scanner.nextLine();
+            if (!input.isEmpty()) {
+                return input;
+            } else {
+                System.out.print("Valor no válido. Por favor, ingrese un valor válido: ");
+            }
+        }
+    }
+    
+    /**
+     * Validador de Entero
+     * @param scanner = entrada de dato
+     * @return = la entrada en caso de ser verdadero, en caso de ser falso solicita ingresar nuevamente.
+     */
+    private int obtenerEnteroValido(Scanner scanner) {
+        while (true) {
+            try {
+                return Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.print("Valor no válido. Por favor, ingrese un número entero válido: ");
+            }
+        }
+    }
+    
+    /**
+     * Validador de Booleano
+     * @param scanner = entrada de dato
+     * @return = la entrada en caso de ser "si" / verdadero, en caso de ser falso solicita ingresar nuevamente.
+     */
+    private boolean obtenerBooleanoValido(Scanner scanner) {
+        while (true) {
+            String input = scanner.nextLine().toLowerCase();
+            if (input.equals("si") || input.equals("sí")) {
+                return true;
+            } else if (input.equals("no")) {
+                return false;
+            } else {
+                System.out.print("Valor no válido. Por favor, ingrese 'Si' o 'No': ");
+            }
+        }
+    }
+    
 }
