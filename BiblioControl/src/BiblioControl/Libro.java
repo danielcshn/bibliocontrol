@@ -1,3 +1,5 @@
+package BiblioControl;
+
 /**
  * Clase para representar los libros.
  */

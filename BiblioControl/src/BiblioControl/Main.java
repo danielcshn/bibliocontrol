@@ -1,12 +1,23 @@
+package BiblioControl;
+
 import java.util.Scanner;
 import java.util.InputMismatchException;
+
+/**
+ * @autor danielcshn
+ * @version 1.1
+ */
 
 /**
  * Clase principal o inicio del programa.
  */
 
 public class Main {
-    public static void main(String[] args) {
+
+	/**
+	 * Menu principal de opciones.
+	 */
+	public static void main() {
         
     	Biblioteca biblioteca = new Biblioteca();
         Scanner scanner = new Scanner(System.in);
