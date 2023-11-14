@@ -43,7 +43,7 @@
 
 - [Java](https://www.oracle.com/java/technologies/downloads/) - v8 / JDK 21
 - [Eclipse IDE for Java Developers](https://www.eclipse.org/downloads/packages/installer) - v2023-06 (4.28.0) - Build: 20230608-1333
-- [Microsoft Windows](https://www.microsoft.com/windows) - v8.1 or high
+- [Microsoft Windows](https://www.microsoft.com/windows) - v10 or high
 
 ---
 
