@@ -19,7 +19,7 @@
 
 <div align="center">
   
-[![GitHub issues](https://img.shields.io/bitbucket/issues/danielcshn/bibliocontrol?style=for-the-badge)](https://github.com/danielcshn/bibliocontrol/issues)
+[![GitHub issues](https://img.shields.io/github/issues/danielcshn/bibliocontrol?style=for-the-badge)](https://github.com/danielcshn/bibliocontrol/issues)
 [![GitHub watchers](https://img.shields.io/github/watchers/danielcshn/bibliocontrol?style=for-the-badge)](https://github.com/danielcshn/bibliocontrol/watchers)
 [![GitHub forks](https://img.shields.io/github/forks/danielcshn/bibliocontrol?style=for-the-badge)](https://github.com/danielcshn/bibliocontrol/fork)
 [![GitHub stars](https://img.shields.io/github/stars/danielcshn/bibliocontrol?style=for-the-badge)](https://github.com/danielcshn/bibliocontrol/stargazers)
