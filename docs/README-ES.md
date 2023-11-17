@@ -29,33 +29,33 @@
 
 </div>
 
-## 📸 Screenshots
+## 📸 Capturas de pantalla
 
 <div align="center">
   <a href="https://github.com/danielcshn/bibliocontrol/">
-    <img src="../imgs/screenshot-1.png" width='60%' alt="BiblioControl - Screenshot 1">
+    <img src="../imgs/screenshot-1.png" width='60%' alt="BiblioControl - Capturas de pantalla 1">
   </a>
 </div>
 
 ---
 
-## 📝 Prerequisites
+## 📝 Requisitos
 
 - [Java](https://www.oracle.com/java/technologies/downloads/) - v8 / JDK 21
 - [Eclipse IDE for Java Developers](https://www.eclipse.org/downloads/packages/installer) - v2023-06 (4.28.0) - Build: 20230608-1333
-- [Microsoft Windows](https://www.microsoft.com/windows) - v10 or high
+- [Microsoft Windows](https://www.microsoft.com/windows) - v10 o superior
 
 ---
 
-## 🐛 Bug reports
+## 🐛 Reportes de Bugs
 
-Please feel free to submit bug reports on the github issue tracker at https://github.com/danielcshn/bibliocontrol/issues
+No dude en enviar Reportes de Bugs en el rastreador de problemas de github en https://github.com/danielcshn/bibliocontrol/issues
 
 ---
 
-## 👷 Contributing
+## 👷 Contribución
 
-We currently not accept any contributions to the code. Thanks for understand.
+Actualmente no aceptamos ninguna contribución al código. Gracias por entender.
 
 ---
 
